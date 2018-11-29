@@ -1,0 +1,44 @@
+<!--
+  Generated template for the RadioSafxPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title text-lg-uppercase>Radios tunisiennes </ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <ion-list>
+
+    <ion-item *ngFor="let r of RTN">
+      <ion-thumbnail item-start tappable (click)="callVideo($event,r)">
+        <img src="{{r.img}}">
+      </ion-thumbnail>
+      <!--<video fullscreen="fullscreen" autoplay="true" (ended)="videoEnded()" controls>-->
+        <!--<source src="blob:https://www.youtube.com/98c72125-6b49-409a-b0ef-cfa8d588e301" type="video/mp4">-->
+      <!--</video>-->
+      <!--<iframe width="729" height="410" src="https://webcam.mosaiquefm.net:1936/mosalive/studio/playlist.m3u8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>-->
+      <!--<video #video1 muted="true" playsinline controls="controls"-->
+             <!--[attr.loop]="videoBuffer[0].looped"-->
+             <!--[@shift]="vidState1" preload="auto"-->
+             <!--[src]="videoBuffer[0].url" [poster]="videoBuffer[0].thumbnail?.url">-->
+      <!--</video>-->
+
+
+
+      <h2>{{r.title}}</h2>
+      <p>{{r.descp}}</p>
+      <!--<button ion-button (click)="playVideo()">Play Video</button>-->
+      <!--<button ion-button (click)="stopPlayingVideo()">Stop playing Video</button>-->
+      <button ion-button dark item-end (click)="play(r)"> <ion-icon name="play"></ion-icon></button>
+      <button ion-button dark item-end (click)="pause(r)"> <ion-icon name="pause"></ion-icon></button>
+    </ion-item>
+
+  </ion-list>
+</ion-content>
